@@ -6,12 +6,12 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: var(--main-offset);
+      margin-right: $main-offset;
     }
   }
 
   &__link {
-    font: var(--small-book);
-    color: var(--color-white);
+    font: $small-book;
+    color: $color-white;
   }
 }

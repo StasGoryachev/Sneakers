@@ -1,5 +1,5 @@
 .cart {
-  margin-left: var(--main-offset);
+  margin-left: $main-offset;
 
   &__btn {
     position: relative;
@@ -19,13 +19,13 @@
     right: -6px;
     bottom: -6px;
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; // всегда по центру
+    justify-content: center; // всегда по центру
     border-radius: 100%;
     height: 16px;
     min-width: 16px;
-    font: var(--small-book);
-    color: var(--color-white);
-    background-color: var(--color-accent);
+    font: $small-book;
+    color: $color-white;
+    background-color: $color-accent;
   }
 }
