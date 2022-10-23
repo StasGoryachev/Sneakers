@@ -64,7 +64,7 @@ const htmlMinify = () => {
       collapseWhitespace: true,
     }))
     .pipe(dest('dist'))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 }
 
 const htmlInclude = () => {
@@ -148,6 +148,7 @@ const images = () => {
 }
 
 watch('src/**/*.html', htmlMinify)
+watch('src/**/*.html', htmlInclude)
 watch('src/partials/**/*.html', htmlInclude)
 watch('src/scss/**/*.scss', styles)
 watch('src/images/svg/**/*.svg', svgSprites)
@@ -186,4 +187,4 @@ const scriptsBuild = () => {
     .pipe(dest('dist'))
 }
 
-exports.build = series(resources, htmlInclude, htmlMinify, svgSprites, stylesBuild, images, scriptsBuild, watchFiles) // build-версия
+exports.build = series(clean, resources, htmlInclude, htmlMinify, svgSprites, stylesBuild, images, scriptsBuild, watchFiles) // build-версия
