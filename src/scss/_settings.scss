@@ -94,35 +94,35 @@ a {
 
 .title {
   margin: 0;
-  margin-bottom: var(--main-offset);
-  font: var(--middle-high-bold);
-  color: var(--color-main);
+  margin-bottom: $main-offset;
+  font: $middle-high-bold;
+  color: $color-main;
 }
 
 @import "mixins";
 
-// .custom-checkbox {
-//   @include custom-checkbox;
+.custom-checkbox {
+  @include custom-checkbox;
 
-//   &__content {
-//     padding-left: 35px;
-//     font: var(--middle-book);
-//     color: var(--color-main);
+  &__content {
+    padding-left: 35px;
+    font: $middle-book;
+    color: $color-main;
 
-//     &::before {
-//       top: -3px;
-//       border-color: var(--color-cameo);
-//       border-radius: 4px;
-//       width: 24px;
-//       height: 24px;
-//     }
+    &::before {
+      top: -3px;
+      border-color: $color-cameo;
+      border-radius: 4px;
+      width: 24px;
+      height: 24px;
+    }
 
-//     &::after {
-//       top: -3px;
-//       width: 24px;
-//       height: 24px;
-//       background-image: url("../img/check.svg");
-//       background-size: 15px 12px;
-//     }
-//   }
-// }
+    &::after {
+      top: -3px;
+      width: 24px;
+      height: 24px;
+      background-image: url("../images/check.svg");
+      background-size: 15px 12px;
+    }
+  }
+}
