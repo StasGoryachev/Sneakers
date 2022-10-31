@@ -1,3 +1,5 @@
+import noUiSlider from 'nouislider';
+
 const rangeSlider = document.getElementById('range-slider');
 
 if (rangeSlider) {

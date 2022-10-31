@@ -1,7 +1,8 @@
+import './_vendor'
+import './_components'
 
-/**
-  * название функции
-  *
-  * @param {number} first - первое число
-  * @returns {number}
-  */
+
+
+
+
+
