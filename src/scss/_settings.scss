@@ -90,6 +90,15 @@ a {
       background-color: $color-accent-hover;
     }
   }
+
+  &--secondary {
+    color: $color-white;
+    background-color: $color-main;
+
+    &:hover {
+      background-color: $color-main-hover;
+    }
+  }
 }
 
 .title {

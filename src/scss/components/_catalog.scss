@@ -6,6 +6,9 @@
   }
 
   &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     grid-column: 9 span;
   }
 
@@ -31,11 +34,17 @@
     margin-bottom: $second-offset;
   }
 
-  &__items {
-  }
-
   &__item {
     grid-column: 4 span;
+  }
+
+  &__apply {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__more {
+    margin-top: $big-offset;
   }
 }
 
@@ -43,6 +52,11 @@
   border-radius: 4px;
   padding: $second-offset;
   background-color: $color-bg;
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .catalog-price {
@@ -65,6 +79,9 @@
   }
 
   &__input {
+    font: $middle-book;
+    text-align: center;
+    color: $color-main;
     border: 1px solid #B2B5BB;
     width: 50%;
     height: 50px;
@@ -83,3 +100,41 @@
     }
   }
 }
+
+.noUi-horizontal {
+  height: 2px;
+  // background: $color-main;
+}
+
+.noUi-connect {
+  background-color: $color-main;
+}
+
+
+.noUi-target {
+    background-color: $color-main;
+    border: none;
+    box-shadow: none;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 3px;
+  height: 18px;
+  right: -1px;
+  top: -8px;
+}
+.noUi-handle {
+  border: none;
+  // border-radius: 3px;
+  background-color: $color-main;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.noUi-handle:after, .noUi-handle:before {
+  display: none;
+}
+
+// .noUi-handle-lower {
+//   right: -3px;
+// }

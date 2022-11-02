@@ -26,7 +26,7 @@ const {
   readFileSync
 } = require('fs');
 // const typograf = require('gulp-typograf');
-const webp = require('gulp-webp');
+// const webp = require('gulp-webp');
 const avif = require('gulp-avif');
 const mainSass = gulpSass(sass);
 const webpackStream = require('webpack-stream');
@@ -230,11 +230,11 @@ const images = () => {
     .pipe(dest(paths.buildImgFolder))
 };
 
-const webpImages = () => {
-  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
-    .pipe(webp())
-    .pipe(dest(paths.buildImgFolder))
-};
+// const webpImages = () => {
+//   return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
+//     .pipe(webp())
+//     .pipe(dest(paths.buildImgFolder))
+// };
 
 const avifImages = () => {
   return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
@@ -268,7 +268,7 @@ const watchFiles = () => {
   watch(`${srcFolder}/*.html`, htmlInclude);
   watch(`${paths.resourcesFolder}/**`, resources);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images);
-  watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
+  // watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages);
   watch(`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, avifImages);
   watch(paths.srcSvg, svgSprites);
 }
@@ -324,11 +324,11 @@ const toProd = (done) => {
   done();
 };
 
-exports.default = series(clean, htmlInclude, scripts, styles, resources, images, webpImages, avifImages, svgSprites, watchFiles);
+exports.default = series(clean, htmlInclude, scripts, styles, resources, images, avifImages, svgSprites, watchFiles);  // удалил webpImages
 
-exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, webpImages, avifImages, svgSprites)
+exports.backend = series(clean, htmlInclude, scriptsBackend, stylesBackend, resources, images, avifImages, svgSprites) // удалил webpImages
 
-exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, webpImages, avifImages, svgSprites, htmlMinify);
+exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, avifImages, svgSprites, htmlMinify); // удалил webpImages
 
 exports.cache = series(cache, rewrite);
 
