@@ -1,0 +1,79 @@
+.faq {
+  padding: $big-offset 0;
+
+  &__icon {
+    fill: #333;
+    display: block;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.5s ease-in-out;
+  }
+}
+
+//? Accordion
+
+.ui-widget {
+  font-family: $font-family;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.ui-accordion .ui-accordion-content {
+  border: 0;
+  // border-top: 1px solid #242424;
+  border-bottom: 1px solid #242424;
+}
+.ui-state-default {
+  border: 0;
+  border-top: 1px solid #242424;
+  border-bottom: 1px solid #242424;
+  background: transparent;
+  font-weight: 400;
+}
+
+.ui-icon {
+  display: none;
+}
+
+.ui-accordion .ui-accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: -1px 0 0 0;
+  padding: 30px 0;
+  font-size: 20px;
+}
+
+.ui-widget-content {
+  border-top: 1px solid #242424;
+  border-bottom: 1px solid #242424;
+  background: #fff;
+  color: #333;
+}
+
+.ui-state-active {
+  font-family: $font-family;
+  border: none;
+  border-top: 1px solid #242424;
+  // border-bottom: 1px solid #242424;
+  background: transparent;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: normal;
+  color: #242424;
+}
+
+
+.ui-state-active .faq__icon {
+  transform: rotate(-45deg);
+}
+
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+  border-top-right-radius: 0;
+}
+
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+  border-top-left-radius: 0;
+}
+

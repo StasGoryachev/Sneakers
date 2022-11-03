@@ -60,6 +60,8 @@
     "graph-modal": "^1.0.4",
     "graph-tabs": "^1.0.0",
     "inputmask": "^5.0.7",
+    "jquery": "^3.6.1",
+    "jquery-ui": "^1.13.2",
     "just-validate": "^3.3.3",
     "nouislider": "^15.6.1",
     "rellax": "^1.12.1",

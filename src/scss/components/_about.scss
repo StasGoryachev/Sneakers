@@ -1,0 +1,91 @@
+.about {
+  position: relative;
+  overflow: hidden;
+  height: 580px;
+  background-color: $color-eastbay;
+
+  &__figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__text {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    max-width: 34%;
+  }
+
+  &__title {
+    margin-bottom: $second-offset;
+    color: $color-white;
+  }
+
+  &__descr {
+    font: $middle-book;
+    color: $color-white;
+
+  }
+
+  &__author{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font: $prehigh-regular;
+    font-style: normal;
+    transform: translateX(50px);
+
+    &::before {
+      content: '';
+      display: inline-block;
+      margin-right: $second-offset;
+      width: 30px;
+      height: 3px;
+      background-color: $color-white;
+
+    }
+  }
+
+  &__quote {
+    margin-bottom: $second-offset;
+    display: inline-block;
+    font: inherit;
+
+    &::before,
+    &::after{
+      display: none;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: 100px;
+    top: -150px;
+    flex-shrink: 0; //!чтобы не не менялась высота и ширина
+    overflow: hidden;
+    width: 500px;
+    height: 950px;
+    background-color: red;
+    transform: rotate(15deg);
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 200%;
+      height: 100%;
+      max-width: none; //! так как у нас в settings задано 100%
+      object-fit: cover;
+      transform: rotate(-15deg) translateX(-50%);
+    }
+  }
+}
+
